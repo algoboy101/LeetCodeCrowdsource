@@ -380,7 +380,7 @@ reward:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: true
+  enable: false
   # title: 推送
   title: # Custom header, leave empty to use the default one
   display_in_home: false
