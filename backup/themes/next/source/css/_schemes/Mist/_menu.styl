@@ -1,0 +1,71 @@
+// Menu
+// --------------------------------------------------
+.site-brand-container {
+  flex-shrink: 0;
+}
+
+.site-nav-toggle {
+  float: right;
+  position: static;
+  top: 10px;
+}
+
+.site-nav {
+  flex-grow: 1;
+
+  +mobile() {
+    transform: translateY(10px);
+  }
+}
+
+// TODO 鼠标划过菜单时,颜色变化
+.menu-item-active a {
+  // color: #fc6423;
+  // color: #DB9019;
+  // color: #ffffff;
+  color: $red;
+}
+
+
+
+.menu {
+  margin: 0; // 上下padding
+  +mobile() {
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .menu-item {
+    margin: 0;
+      // box-shadow: 0 1px 3px #5b9600, 0 1px 3px #5b9600; // 边界框颜色
+      // box-shadow: 0 1px 3px #F1AAA6, 0 1px 3px #F1AAA6; // 边界框形状
+      // border-radius: 20px;
+
+    +mobile() {
+      display: block;
+      margin-top: 5px;
+    }
+
+    a, span.exturl {
+      border-radius: 2px;
+      padding: 0 10px;
+      transition-property: background;
+
+      +mobile() {
+        text-align: left;
+      }
+
+      &:hover {
+        @extend .menu-item-active a;
+      }
+    }
+
+    .badge {
+      background: white;
+      border-radius: 10px;
+      color: $black-light;
+      padding: 1px 4px;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, .1);
+    }
+  }
+}
