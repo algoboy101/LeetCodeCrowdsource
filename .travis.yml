@@ -17,14 +17,15 @@ before_install:
   - npm install -g hexo-cli
 
 #安装git插件和搜索功能插件
-install:
-  - npm install
+# install:
+  # - npm install
 
   # 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
   - cp backup/blog/* . -R
-  - pwd
-  - ls
+  # - pwd
+  # - ls
+  - npm install
   - git config user.name "Xuezhi.Zhang"
   - git config user.email "algoboy@126.com"
   # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
