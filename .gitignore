@@ -1,0 +1,6 @@
+db.json
+public/
+.deploy_git/
+node_modules/
+run.sh
+clean.sh
