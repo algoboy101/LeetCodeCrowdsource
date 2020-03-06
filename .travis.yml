@@ -25,6 +25,7 @@ before_script:
   - cp backup/blog/* . -R     # 拷贝blog文件
   - ls
   - pwd
+  - mkdir source/_posts
   - ls source/
   - cp md/* source/_posts/ -R # 拷贝文章文件
   # - pwd
