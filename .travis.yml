@@ -23,13 +23,7 @@ before_install:
   # 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
   - cp backup/blog/* . -R     # 拷贝blog文件
-  - ls
-  - pwd
-  - mkdir source/_posts
-  - ls source/
-  - cp md/* source/_posts/ -R # 拷贝文章文件
-  # - pwd
-  # - ls
+  - cp _posts source/ -R # 拷贝文章文件
   - npm install
   - git config user.name "Xuezhi.Zhang"
   - git config user.email "algoboy@126.com"
