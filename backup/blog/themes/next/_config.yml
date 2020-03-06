@@ -399,7 +399,8 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: true
-  url: https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/source/
+  url: https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/
+  # url: https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/source/
 
 
 # ---------------------------------------------------------------
