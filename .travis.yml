@@ -22,6 +22,7 @@ install:
 
   # 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
+  - cp backup/blog/* . -R
   - pwd
   - ls
   - git config user.name "Xuezhi.Zhang"
