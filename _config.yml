@@ -204,7 +204,7 @@ google_analytics: UA-86892026-1
 # 百度主动推送
 baidu_url_submit:
   count: 90 #代表提交最新的三个链接
-  host: blog.xuezhisd.top #在百度站长平台中注册的域名
+  host: leetcode.xuezhisd.top #在百度站长平台中注册的域名
   token: wX1kmBRFOVm1et30 
   path: baidu_urls.txt #文本文档的地址，新链接会保存在此文本文档里
 
