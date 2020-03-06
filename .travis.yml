@@ -23,6 +23,9 @@ before_install:
   # 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
   - cp backup/blog/* . -R     # 拷贝blog文件
+  - ls
+  - pwd
+  - ls source/
   - cp md/* source/_posts/ -R # 拷贝文章文件
   # - pwd
   # - ls
