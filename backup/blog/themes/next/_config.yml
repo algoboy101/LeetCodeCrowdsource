@@ -303,7 +303,7 @@ excerpt_description: false
 # Automatically excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 100
 
 
