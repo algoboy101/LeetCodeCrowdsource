@@ -34,6 +34,8 @@ before_script:
 script:
   - hexo clean
   - hexo generate # generate static files
+#   - hexo deploy
+after_success:
   - hexo deploy
 
 # deploy:
