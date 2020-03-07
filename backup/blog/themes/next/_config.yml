@@ -118,7 +118,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: true
-  post: false
+  post: true
   language: zh-CN
 
 
