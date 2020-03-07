@@ -269,7 +269,7 @@ toc:
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: true
+  expand_all: false
   # Maximum heading depth of generated toc.
   max_depth: 6
 
@@ -335,7 +335,7 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  separated_meta: false
+  separated_meta: true
   # 文章中是否显示(本文字数|阅读时长)
   item_text_post: true
   # 网页底部是否显示文字(站点总字数|阅读时长)
