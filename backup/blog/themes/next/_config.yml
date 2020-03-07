@@ -298,12 +298,12 @@ chat:
 # ---------------------------------------------------------------
 # fronter description:
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: false
+excerpt_description: true
 # 是否自动摘要,以及自动摘要的字数
 # Automatically excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
+  enable: false
   length: 100
 
 
@@ -385,7 +385,7 @@ related_posts:
   title: # Custom header, leave empty to use the default one
   display_in_home: false
   params:
-    maxCount: 3
+    maxCount: 2
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
