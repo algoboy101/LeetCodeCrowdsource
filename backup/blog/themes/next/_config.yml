@@ -335,7 +335,7 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  separated_meta: true
+  separated_meta: false # 换行
   # 文章中是否显示(本文字数|阅读时长)
   item_text_post: true
   # 网页底部是否显示文字(站点总字数|阅读时长)
