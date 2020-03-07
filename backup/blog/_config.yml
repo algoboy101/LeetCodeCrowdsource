@@ -6,7 +6,8 @@
 #标题
 # Site
 #title: 张学志の博客
-title: LeetCode题解
+#title: LeetCode题解
+title: LeetCodeCrowdsource
 #副标题
 # subtitle: '一起LeetCode，一起Coding!'
 #网站描述
@@ -15,6 +16,7 @@ title: LeetCode题解
 # keywords: kw1, kw2, kw3
 # 作者昵称
 # author: 张学志
+# author: LeetCode
 author: LeetCode
 #网站语言，默认英语
 # language: en
@@ -92,7 +94,7 @@ post_asset_folder: false
 #把链接改为与根目录的相对位址
 relative_link: false
 #显示未来的文章
-future: true
+future: false
 #代码块的设置
 highlight:
   enable: true
@@ -108,7 +110,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 50
   order_by: -date
 
 

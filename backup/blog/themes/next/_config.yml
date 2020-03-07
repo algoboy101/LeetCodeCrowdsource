@@ -118,7 +118,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: true
-  post: false
+  post: true
   language: zh-CN
 
 
@@ -181,8 +181,8 @@ sidebar:
   #  - always  expand for all pages automatically.
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  totally remove sidebar including sidebar toggle.
-  display: post
-  # display: always
+  # display: post
+  display: always
   #display: hide
   # display: remove
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
@@ -224,7 +224,7 @@ site_state: false
 social:
   GitHub: https://github.com/algoboy101/LeetCodeCrowdsource || github
   # E-Mail: mailto:algoboy@126.com || envelope
-  E-Mail: https://blog.xuezhisd.top/mailto.html || envelope
+  E-Mail: https://leetcode.xuezhisd.top/mailto.html || envelope
   CSDN: https://blog.csdn.net/xuezhisdc || book
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
@@ -254,7 +254,7 @@ links_settings:
 links:
   #Title: http://yoursite.com
   张学志: https://blog.xuezhisd.top/
-  # 袁勇: https://yongyuan.name/
+  袁勇: https://yongyuan.name/
 
 
 # ---------------------------------------------------------------
@@ -321,7 +321,7 @@ read_more_btn: false
 # Post meta display settings
 post_meta:
   item_text: false # 是否显示文字描述
-  created_at: true
+  created_at: false
   updated_at:
     enable: true
     another_day: true
@@ -335,7 +335,7 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  separated_meta: false
+  separated_meta: false # 换行
   # 文章中是否显示(本文字数|阅读时长)
   item_text_post: true
   # 网页底部是否显示文字(站点总字数|阅读时长)
@@ -385,7 +385,7 @@ related_posts:
   title: # Custom header, leave empty to use the default one
   display_in_home: false
   params:
-    maxCount: 3
+    maxCount: 2
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
@@ -520,7 +520,7 @@ bookmark:
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
   enable: false
-  permalink: https://github.com/algoboy101
+  permalink: https://github.com/algoboy101/LeetCodeCrowdsource
   title: Follow me on GitHub
 
 
