@@ -111,7 +111,7 @@ highlight:
 index_generator:
   path: ''
   per_page: 50
-  order_by: -date
+  order_by: date
 
 
 # 分类和标签
