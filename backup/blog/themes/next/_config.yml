@@ -509,7 +509,7 @@ reading_progress:
 # 右上角书签
 # Bookmark Support
 bookmark:
-  enable: true
+  enable: false
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
@@ -520,7 +520,7 @@ bookmark:
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
   enable: false
-  permalink: https://github.com/algoboy101
+  permalink: https://github.com/algoboy101/LeetCodeCrowdsource
   title: Follow me on GitHub
 
 
