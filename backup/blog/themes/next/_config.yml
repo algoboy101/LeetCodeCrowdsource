@@ -224,7 +224,7 @@ site_state: false
 social:
   GitHub: https://github.com/algoboy101/LeetCodeCrowdsource || github
   # E-Mail: mailto:algoboy@126.com || envelope
-  E-Mail: https://blog.xuezhisd.top/mailto.html || envelope
+  E-Mail: https://leetcode.xuezhisd.top/mailto.html || envelope
   CSDN: https://blog.csdn.net/xuezhisdc || book
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
@@ -254,7 +254,7 @@ links_settings:
 links:
   #Title: http://yoursite.com
   张学志: https://blog.xuezhisd.top/
-  # 袁勇: https://yongyuan.name/
+  袁勇: https://yongyuan.name/
 
 
 # ---------------------------------------------------------------
