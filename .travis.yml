@@ -11,7 +11,7 @@ before_install:
     - sudo apt-get remove python3-pip
 install:
     - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
-    - sudo apt-get install texlive-full
+    # - sudo apt-get install texlive-full
 script:
     # travis-sphinx build --source=./
     #travis-sphinx build --source=./source
