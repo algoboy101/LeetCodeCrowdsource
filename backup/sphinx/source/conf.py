@@ -19,9 +19,9 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = '张学志の博客'
-copyright = '2019, 张学志'
-author = '张学志'
+project = 'LeetCodeCrowdsource'
+copyright = '2020, LeetCodeCrowdsource'
+author = 'LeetCodeCrowdsource'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
