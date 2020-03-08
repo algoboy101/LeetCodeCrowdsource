@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
 目录
