@@ -4,14 +4,14 @@
    contain the root `toctree` directive.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
 目录
 ====
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    QA/index.rst
    Topic/index.rst
