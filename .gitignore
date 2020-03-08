@@ -4,3 +4,5 @@ public/
 node_modules/
 run.sh
 clean.sh
+backup/sphinx/source/QA/
+backup/sphinx/source/Topic/
