@@ -20,7 +20,7 @@ install:
     # - cp apts/* /var/cache/apt/archives/
     - sudo apt-get install texlive-full
     - ls /var/cache/apt/archives/
-    - mkdir apts
+    # - mkdir apts
     - cp /var/cache/apt/archives/*.deb apts/
     - ls
 script:
