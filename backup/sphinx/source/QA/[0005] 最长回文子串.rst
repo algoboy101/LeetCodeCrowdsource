@@ -1,0 +1,168 @@
+[0005] 最长回文子串
+===================
+
+-  https://leetcode-cn.com/problems/longest-palindromic-substring
+
+题目描述
+--------
+
+.. raw:: html
+
+   <p>
+
+给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为
+1000。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+示例 1：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong> &quot;babad&quot;
+   <strong>输出:</strong> &quot;bab&quot;
+   <strong>注意:</strong> &quot;aba&quot; 也是一个有效答案。
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+示例 2：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong> &quot;cbbd&quot;
+   <strong>输出:</strong> &quot;bb&quot;
+   </pre>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+Related Topics
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <li>
+
+字符串
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+动态规划
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+题目代码
+--------
+
+.. code:: cpp
+
+    class Solution {
+    public:
+        string longestPalindrome(string s) {
+
+        }
+    };
+
+题目解析
+--------
+
+方法一
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //
+
+方法二
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //

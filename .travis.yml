@@ -16,9 +16,10 @@ install:
     - ls /var/cache/apt/archives/
 script:
     # 生成 md格式文档
-    - python backup/sphinx/gen_source_md.py
+    - python backup/sphinx/gen_source_del_header.py
 
     # 构建 pdf文档：build/latex/sphinx.pdf
+    - python backup/sphinx/gen_source_pdf.py
     - cd backup/sphinx
     - make latexpdf
     - ls 
@@ -29,6 +30,7 @@ script:
     - ls
     
     # 构建 html文档：doc/build
+    - python backup/sphinx/gen_source_html.py
     - travis-sphinx build --source=./backup/sphinx/source --nowarn
     - cp ./LeetCodeCrowdsource.pdf doc/build/
 

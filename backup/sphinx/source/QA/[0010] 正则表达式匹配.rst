@@ -1,0 +1,277 @@
+[0010] 正则表达式匹配
+=====================
+
+-  https://leetcode-cn.com/problems/regular-expression-matching
+
+题目描述
+--------
+
+.. raw:: html
+
+   <p>
+
+给你一个字符串 s 和一个字符规律 p，请你来实现一个支持
+'.' 和 '\*' 的正则表达式匹配。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre>&#39;.&#39; 匹配任意单个字符
+   &#39;*&#39; 匹配零个或多个前面的那一个元素
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+说明:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <ul>
+
+::
+
+    <li><code>s</code>&nbsp;可能为空，且只包含从&nbsp;<code>a-z</code>&nbsp;的小写字母。</li>
+    <li><code>p</code>&nbsp;可能为空，且只包含从&nbsp;<code>a-z</code>&nbsp;的小写字母，以及字符&nbsp;<code>.</code>&nbsp;和&nbsp;<code>*</code>。</li>
+
+.. raw:: html
+
+   </ul>
+
+.. raw:: html
+
+   <p>
+
+示例 1:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong>
+   s = &quot;aa&quot;
+   p = &quot;a&quot;
+   <strong>输出:</strong> false
+   <strong>解释:</strong> &quot;a&quot; 无法匹配 &quot;aa&quot; 整个字符串。
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+示例 2:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong>
+   s = &quot;aa&quot;
+   p = &quot;a*&quot;
+   <strong>输出:</strong> true
+   <strong>解释:</strong>&nbsp;因为 &#39;*&#39; 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 &#39;a&#39;。因此，字符串 &quot;aa&quot; 可被视为 &#39;a&#39; 重复了一次。
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+示例 3:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong>
+   s = &quot;ab&quot;
+   p = &quot;.*&quot;
+   <strong>输出:</strong> true
+   <strong>解释:</strong>&nbsp;&quot;.*&quot; 表示可匹配零个或多个（&#39;*&#39;）任意字符（&#39;.&#39;）。
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+示例 4:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong>
+   s = &quot;aab&quot;
+   p = &quot;c*a*b&quot;
+   <strong>输出:</strong> true
+   <strong>解释:</strong>&nbsp;因为 &#39;*&#39; 表示零个或多个，这里 &#39;c&#39; 为 0 个, &#39;a&#39; 被重复一次。因此可以匹配字符串 &quot;aab&quot;。
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+示例 5:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong>
+   s = &quot;mississippi&quot;
+   p = &quot;mis*is*p*.&quot;
+   <strong>输出:</strong> false</pre>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+Related Topics
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <li>
+
+字符串
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+动态规划
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+回溯算法
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+题目代码
+--------
+
+.. code:: cpp
+
+    class Solution {
+    public:
+        bool isMatch(string s, string p) {
+
+        }
+    };
+
+题目解析
+--------
+
+方法一
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //
+
+方法二
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //

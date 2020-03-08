@@ -41,10 +41,10 @@ for d in name_vec:
     format_poster = os.path.join(path_dst_topic, "*.md")
     fname_index = os.path.join(path_dst_topic, "index.rst")
 
-    # 删除 旧文件
+    # 删除 旧文件夹
     if(os.path.isdir(path_dst_topic) or os.path.isfile(path_dst_topic)):
         os.system("rm %s -rf" % path_dst_topic)
-    # 拷贝 新文件
+    # 拷贝 新文件夹
     os.system("cp %s %s -R" % (path_src_topic, path_dst))
 
     # 获取文件列表，并排序
@@ -60,17 +60,17 @@ for d in name_vec:
         with open(f, "w") as fp:
             fp.write(content_new)
         
-    # 生成QA/index.rst
-    with open(fname_index, "w") as fp:
-        # fp.write("%s\n" % name)
-        fp.write("%s\n" % name_cn)
-        fp.write("==============\n\n")
-        fp.write("..  toctree::\n")
-        fp.write("    :maxdepth: 1\n\n")
-        for f in files_md:
-            fmd = os.path.basename(f)
-            fp.write("    " + fmd + "\n") 
+    # # 生成QA/index.rst
+    # with open(fname_index, "w") as fp:
+    #     # fp.write("%s\n" % name)
+    #     fp.write("%s\n" % name_cn)
+    #     fp.write("==============\n\n")
+    #     fp.write("..  toctree::\n")
+    #     fp.write("    :maxdepth: 2\n\n")
+    #     for f in files_md:
+    #         fmd = os.path.basename(f)
+    #         fp.write("    " + fmd + "\n") 
 
 
 
-exit()
+# exit()

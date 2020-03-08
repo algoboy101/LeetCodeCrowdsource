@@ -1,0 +1,202 @@
+[0006] Z 字形变换
+=================
+
+-  https://leetcode-cn.com/problems/zigzag-conversion
+
+题目描述
+--------
+
+.. raw:: html
+
+   <p>
+
+将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre>L   C   I   R
+   E T O E S I I G
+   E   D   H   N
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+请你实现这个将字符串进行指定行数变换的函数：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre>string convert(string s, int numRows);</pre>
+
+.. raw:: html
+
+   <p>
+
+示例 1:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong> s = &quot;LEETCODEISHIRING&quot;, numRows = 3
+   <strong>输出:</strong> &quot;LCIRETOESIIGEDHN&quot;
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+示例 2:
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre><strong>输入:</strong> s = &quot;LEETCODEISHIRING&quot;, numRows =&nbsp;4
+   <strong>输出:</strong>&nbsp;&quot;LDREOEIIECIHNTSG&quot;
+   <strong>解释:</strong>
+
+   L     D     R
+   E   O E   I I
+   E C   I H   N
+   T     S     G</pre>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+Related Topics
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <li>
+
+字符串
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+题目代码
+--------
+
+.. code:: cpp
+
+    class Solution {
+    public:
+        string convert(string s, int numRows) {
+
+        }
+    };
+
+题目解析
+--------
+
+方法一
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //
+
+方法二
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //

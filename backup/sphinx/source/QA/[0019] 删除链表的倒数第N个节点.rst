@@ -1,0 +1,199 @@
+[0019] 删除链表的倒数第N个节点
+==============================
+
+-  https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list
+
+题目描述
+--------
+
+.. raw:: html
+
+   <p>
+
+给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+示例：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <pre>给定一个链表: <strong>1-&gt;2-&gt;3-&gt;4-&gt;5</strong>, 和 <strong><em>n</em> = 2</strong>.
+
+   当删除了倒数第二个节点后，链表变为 <strong>1-&gt;2-&gt;3-&gt;5</strong>.
+   </pre>
+
+.. raw:: html
+
+   <p>
+
+说明：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+给定的 n 保证是有效的。
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+进阶：
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <p>
+
+你能尝试使用一趟扫描实现吗？
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+Related Topics
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <li>
+
+链表
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+双指针
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+题目代码
+--------
+
+.. code:: cpp
+
+    /**
+     * Definition for singly-linked list.
+     * struct ListNode {
+     *     int val;
+     *     ListNode *next;
+     *     ListNode(int x) : val(x), next(NULL) {}
+     * };
+     */
+    class Solution {
+    public:
+        ListNode* removeNthFromEnd(ListNode* head, int n) {
+
+        }
+    };
+
+题目解析
+--------
+
+方法一
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //
+
+方法二
+~~~~~~
+
+分析
+^^^^
+
+思路
+^^^^
+
+注意
+^^^^
+
+知识点
+^^^^^^
+
+复杂度
+^^^^^^
+
+参考
+^^^^
+
+答案
+^^^^
+
+.. code:: cpp
+
+    //
