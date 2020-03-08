@@ -4,12 +4,12 @@ branches:
   only:
     - master
 
-# before_install:
-    # - sudo apt-get update
+before_install:
+    - sudo apt-get update
 install:
     # sphinx
-    - sudo apt-get install python3-pip python3-setuptools python3-wheel python3-sphinx
-    - pip3 install travis-sphinx recommonmark sphinx_rtd_theme
+    - sudo apt-get install python3-pip python3-setuptools python3-wheel #python3-sphinx
+    - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
     # latex pdf
     - sudo apt-get install texlive-full
 script:
