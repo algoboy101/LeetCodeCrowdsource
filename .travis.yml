@@ -1,48 +1,36 @@
-sudo: false
-language: node_js
-node_js:
-  - 10 # use nodejs v10 LTS
-cache: npm
+language: python - "3.7"
+
 branches:
   only:
-    - master # build master branch only
+    - master
 
-# 设置缓存文件
-#cache:
-#  directories:
-#    - node_modules
-
-#在构建之前安装hexo环境
 before_install:
-  - npm install -g hexo-cli
-
-#安装git插件和搜索功能插件
-# install:
-  # - npm install
-
-  # 设置git提交名，邮箱；替换真实token到_config.yml文件
-before_script:
-  - cp backup/blog/* . -R     # 拷贝blog文件
-  - cp _posts source/ -R # 拷贝文章文件
-  - npm install
-  - git config user.name "Xuezhi.Zhang"
-  - git config user.email "algoboy@126.com"
-  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
-  - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
-  - cat _config.yml
-# 执行清缓存，生成网页操作
+    - sudo apt-get update
+    - sudo apt-get install python3-pip python3-setuptools python3-wheel
+    - sudo pip3 install pip --upgrade
+    - sudo apt-get remove python3-pip
+install:
+    - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
+    # - sudo apt-get install texlive-full
 script:
-  - hexo clean
-  - hexo generate # generate static files
-#   - hexo deploy
-after_success:
-  - hexo deploy
+    # travis-sphinx build --source=./
+    #travis-sphinx build --source=./source
+    - python backup/sphinx/gen_source_md.py
+    - ls
+    # - make latexpdf
+    - pwd
+    - ls
+    - travis-sphinx build --source=./backup/sphinx/source --nowarn
+    - ls
+    # - ls build/
+    # - ls build/latex
+    - ls doc
+    - ls doc/build
+    # - cp build/latex/sphinx.pdf doc/build/
+#     - cp build/latex/sphinx.pdf doc/build/html/
 
-# deploy:
-#   provider: pages
-#   skip-cleanup: true
-#   github_token: $github_token
-#   keep-history: true
-#   on:
-#     branch: master
-#   local-dir: public
+after_success:
+    # travis-sphinx deploy
+    # travis-sphinx deploy --cname www.xuezhisd.top
+    #travis-sphinx deploy --cname blog.xuezhisd.top
+    - travis-sphinx deploy -b master -c "leetcode.xuezhisd.top" -m "update blog automatically by travis."
