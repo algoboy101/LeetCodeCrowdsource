@@ -6,25 +6,29 @@ branches:
 
 # before_install:
     # - sudo apt-get update
-    # - sudo apt-get install python3-pip python3-setuptools python3-wheel
-    # - sudo apt-get install python3-sphinx python3-travis-sphinx python3-recommonmark python3-sphinx_rtd_theme
-    # - sudo pip3 install pip --upgrade
-    # - sudo apt-get remove python3-pip
 install:
-    - sudo apt-get install python3-pip python3-setuptools python3-wheel
-    - sudo apt-get install 
-    - sudo apt-get install python3-sphinx #python3-travis-sphinx python3-recommonmark python3-sphinx_rtd_theme
+    # sphinx
+    - sudo apt-get install python3-pip python3-setuptools python3-wheel python3-sphinx
     - pip3 install travis-sphinx recommonmark sphinx_rtd_theme
-    # - sudo apt-get install texlive-full
+    # latex pdf
+    - sudo apt-get install texlive-full
 script:
     # 生成 md格式文档
     - python backup/sphinx/gen_source_md.py
+
     # 构建 pdf文档：build/latex/sphinx.pdf
-    # - make latexpdf
-    # - cp build/latex/sphinx.pdf ./LeetCodeCrowdsource.pdf
+    - cd backup/sphinx
+    - make latexpdf
+    - ls 
+    - ls build
+    - ls build/latex/
+    - cp build/latex/sphinx.pdf ../../LeetCodeCrowdsource.pdf
+    - cd ../../
+    - ls
+    
     # 构建 html文档：doc/build
     - travis-sphinx build --source=./backup/sphinx/source --nowarn
-    # - cp ./LeetCodeCrowdsource.pdf doc/build/
+    - cp ./LeetCodeCrowdsource.pdf doc/build/
 
 after_success:
     - travis-sphinx deploy -b master -c "leetcode.xuezhisd.top" -m "update blog automatically by travis."
