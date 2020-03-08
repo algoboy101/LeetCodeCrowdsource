@@ -62,7 +62,8 @@ for d in name_vec:
         
     # 生成QA/index.rst
     with open(fname_index, "w") as fp:
-        fp.write("%s\n" % name)
+        # fp.write("%s\n" % name)
+        fp.write("%s\n" % name_cn)
         fp.write("==============\n\n")
         fp.write("..  toctree::\n")
         fp.write("    :maxdepth: 10\n\n")
