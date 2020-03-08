@@ -66,7 +66,7 @@ for d in name_vec:
         fp.write("%s\n" % name_cn)
         fp.write("==============\n\n")
         fp.write("..  toctree::\n")
-        fp.write("    :maxdepth: 10\n\n")
+        fp.write("    :maxdepth: 1\n\n")
         for f in files_md:
             fmd = os.path.basename(f)
             fp.write("    " + fmd + "\n") 
