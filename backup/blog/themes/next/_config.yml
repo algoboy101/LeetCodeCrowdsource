@@ -222,10 +222,12 @@ site_state: false
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
+  Docs: http://leetcodedoc.xuezhisd.top || book
+  PDF: http://leetcodedoc.xuezhisd.top/LeetCodeCrowdsource.pdf || file-pdf-o
   GitHub: https://github.com/algoboy101/LeetCodeCrowdsource || github
   # E-Mail: mailto:algoboy@126.com || envelope
   E-Mail: https://leetcode.xuezhisd.top/mailto.html || envelope
-  CSDN: https://blog.csdn.net/xuezhisdc || book
+  # CSDN: https://blog.csdn.net/xuezhisdc || book
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
