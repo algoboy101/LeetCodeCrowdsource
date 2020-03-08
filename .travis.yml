@@ -46,6 +46,7 @@ script:
   # hexo html
   - hexo clean
   - hexo generate # generate static files
+  - ls 
   # ##################
   # # sphinx
   # # 生成 md格式文档
