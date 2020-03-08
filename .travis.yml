@@ -12,8 +12,9 @@ branches:
     # - sudo apt-get remove python3-pip
 install:
     - sudo apt-get install python3-pip python3-setuptools python3-wheel
-    - sudo apt-get install python3-sphinx python3-travis-sphinx python3-recommonmark python3-sphinx_rtd_theme
-    # - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
+    - sudo apt-get install 
+    - sudo apt-get install python3-sphinx #python3-travis-sphinx python3-recommonmark python3-sphinx_rtd_theme
+    - pip3 install travis-sphinx recommonmark sphinx_rtd_theme
     # - sudo apt-get install texlive-full
 script:
     # 生成 md格式文档
