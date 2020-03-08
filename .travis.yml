@@ -43,10 +43,10 @@ before_script:
 
 # 执行清缓存，生成网页操作
 script:
-  # hexo html
+  # hexo html ./public
   - hexo clean
   - hexo generate # generate static files
-  - ls 
+  - ls public
   # ##################
   # # sphinx
   # # 生成 md格式文档
