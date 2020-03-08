@@ -1,5 +1,9 @@
 # language: python - "3.7"
 
+cache:
+  directories:
+    - apts
+
 branches:
   only:
     - master
@@ -13,10 +17,11 @@ install:
     - sudo apt-get install python3-pip python3-setuptools python3-wheel #python3-sphinx
     - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
     # latex pdf
+    # - cp apts/* /var/cache/apt/archives/
     - sudo apt-get install texlive-full
     - ls /var/cache/apt/archives/
     - mkdir apts
-    - cp /var/cache/apt/archives/* apts/
+    - cp /var/cache/apt/archives/*.deb apts/
     - ls
 script:
     # 生成 md格式文档
@@ -24,6 +29,7 @@ script:
 
     # 构建 pdf文档：build/latex/sphinx.pdf
     - python backup/sphinx/gen_source_pdf.py
+    - cat backup/sphinx/source/QA/index.rst
     - cd backup/sphinx
     - make clean
     - make html
@@ -37,6 +43,7 @@ script:
     
     # 构建 html文档：doc/build
     - python backup/sphinx/gen_source_html.py
+    - cat backup/sphinx/source/QA/index.rst
     - travis-sphinx build --source=./backup/sphinx/source --nowarn
     - cp ./LeetCodeCrowdsource.pdf doc/build/
 
