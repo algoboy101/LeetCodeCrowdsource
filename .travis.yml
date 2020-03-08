@@ -13,6 +13,7 @@ install:
     - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
     # latex pdf
     - sudo apt-get install texlive-full
+    - ls /var/cache/apt/archives/
 script:
     # 生成 md格式文档
     - python backup/sphinx/gen_source_md.py
