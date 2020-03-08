@@ -22,7 +22,7 @@ script:
     - ls 
     - ls build
     - ls build/latex/
-    - cp build/latex/sphinx.pdf ../../LeetCodeCrowdsource.pdf
+    - cp build/latex/leetcodecrowdsource.pdf ../../LeetCodeCrowdsource.pdf
     - cd ../../
     - ls
     
