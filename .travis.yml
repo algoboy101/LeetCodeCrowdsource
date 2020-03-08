@@ -15,11 +15,12 @@ install:
 script:
     # travis-sphinx build --source=./
     #travis-sphinx build --source=./source
+    python backup/sphinx/gen_source_md.py
     - ls
     # - make latexpdf
     - pwd
     - ls
-    - travis-sphinx build --source=./source --nowarn
+    - travis-sphinx build --source=./backup/sphinx/source --nowarn
     - ls
     # - ls build/
     # - ls build/latex
