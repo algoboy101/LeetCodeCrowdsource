@@ -1,4 +1,4 @@
-language: python - "3.7"
+# language: python - "3.7"
 
 branches:
   only:
@@ -7,30 +7,20 @@ branches:
 before_install:
     - sudo apt-get update
     - sudo apt-get install python3-pip python3-setuptools python3-wheel
-    - sudo pip3 install pip --upgrade
-    - sudo apt-get remove python3-pip
+    # - sudo pip3 install pip --upgrade
+    # - sudo apt-get remove python3-pip
 install:
     - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
     # - sudo apt-get install texlive-full
 script:
-    # travis-sphinx build --source=./
-    #travis-sphinx build --source=./source
+    # 生成 md格式文档
     - python backup/sphinx/gen_source_md.py
-    - ls
+    # 构建 pdf文档：build/latex/sphinx.pdf
     # - make latexpdf
-    - pwd
-    - ls
+    # - cp build/latex/sphinx.pdf ./LeetCodeCrowdsource.pdf
+    # 构建 html文档：doc/build
     - travis-sphinx build --source=./backup/sphinx/source --nowarn
-    - ls
-    # - ls build/
-    # - ls build/latex
-    - ls doc
-    - ls doc/build
-    # - cp build/latex/sphinx.pdf doc/build/
-#     - cp build/latex/sphinx.pdf doc/build/html/
+    # - cp ./LeetCodeCrowdsource.pdf doc/build/
 
 after_success:
-    # travis-sphinx deploy
-    # travis-sphinx deploy --cname www.xuezhisd.top
-    #travis-sphinx deploy --cname blog.xuezhisd.top
     - travis-sphinx deploy -b master -c "leetcode.xuezhisd.top" -m "update blog automatically by travis."
