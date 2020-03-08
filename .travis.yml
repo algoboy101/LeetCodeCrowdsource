@@ -6,7 +6,6 @@ cache: npm
 
 cache:
   directories:
-    - apts 
     - node_modules
 
 branches:
@@ -17,19 +16,9 @@ branches:
 before_install:
   - sudo apt-get update
   
-
 install:
   # hexo html
   - npm install -g hexo-cli
-
-  # sphinx html
-  - sudo apt-get install python3-pip python3-setuptools python3-wheel #python3-sphinx
-  - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
-  
-  # sphinx pdf
-  # - sudo cp apts/* /var/cache/apt/archives/
-  # - sudo apt-get install texlive-full
-  # - sudo apt-get install pandoc
 
 before_script:
   # hexo html
@@ -48,26 +37,6 @@ script:
   - hexo clean
   - hexo generate # generate static files
   - ls public
-  # ##################
-  # sphinx
-  # 删除header
-  - python backup/sphinx/gen_source_del_header.py
-
-  # 构建 html文档：doc/build
-  - python backup/sphinx/gen_source_html.py # 构建 index.rst
-  - travis-sphinx build --source=./backup/sphinx/source --nowarn
-
-  # # 构建 pdf文档：build/latex/sphinx.pdf
-  # - python backup/sphinx/gen_source_pdf.py # 构建 index.rst
-  # - cd backup/sphinx
-  # - make latexpdf
-  # - cp build/latex/leetcodecrowdsource.pdf ../../LeetCodeCrowdsource.pdf
-  # - cd ../../
-  
-  # 拷贝文件
-  - mkdir public/doc
-  - cp doc/build/* public/doc/ -R
-#   - cp ./LeetCodeCrowdsource.pdf doc/build/
 
 after_success:
   - hexo deploy
