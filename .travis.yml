@@ -21,6 +21,8 @@ script:
     # 构建 pdf文档：build/latex/sphinx.pdf
     - python backup/sphinx/gen_source_pdf.py
     - cd backup/sphinx
+    - make clean
+    - make html
     - make latexpdf
     - ls 
     - ls build
