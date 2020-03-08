@@ -1,53 +1,67 @@
-# language: python - "3.7"
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
 
 cache:
   directories:
-    - apts
+    - apts 
+
+cache: npm
 
 branches:
   only:
-    - master
+    - master # build master branch only
 
+#在构建之前安装hexo环境
 before_install:
-    - sudo apt-get update
-install:
-    # sphinx
-    - ls
-    - ls apts/
-    - ls /var/cache/apt/archives/
-    - sudo apt-get install python3-pip python3-setuptools python3-wheel #python3-sphinx
-    - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
-    # latex pdf
-    - sudo cp apts/* /var/cache/apt/archives/
-    - sudo apt-get install texlive-full
-    - sudo apt-get install pandoc
-    # - ls /var/cache/apt/archives/
-    # - mkdir apts
-    # - cp /var/cache/apt/archives/*.deb apts/
-    # - ls
-script:
-    # 生成 md格式文档
-    - python backup/sphinx/gen_source_del_header.py
+  - sudo apt-get update
+  
 
-    # 构建 pdf文档：build/latex/sphinx.pdf
-    - python backup/sphinx/gen_source_pdf.py
-    - cat backup/sphinx/source/QA/index.rst
-    - cd backup/sphinx
-    - make clean
-    - make html
-    - make latexpdf
-    - ls 
-    - ls build
-    - ls build/latex/
-    - cp build/latex/leetcodecrowdsource.pdf ../../LeetCodeCrowdsource.pdf
-    - cd ../../
-    - ls
-    
-    # 构建 html文档：doc/build
-    - python backup/sphinx/gen_source_html.py
-    - cat backup/sphinx/source/QA/index.rst
-    - travis-sphinx build --source=./backup/sphinx/source --nowarn
-    - cp ./LeetCodeCrowdsource.pdf doc/build/
+install:
+  # hexo html
+  - npm install -g hexo-cli
+
+  # # sphinx html
+  # - sudo apt-get install python3-pip python3-setuptools python3-wheel #python3-sphinx
+  # - pip3 install sphinx travis-sphinx recommonmark sphinx_rtd_theme
+  
+  # sphinx pdf
+  # - sudo cp apts/* /var/cache/apt/archives/
+  # - sudo apt-get install texlive-full
+  # - sudo apt-get install pandoc
+
+before_script:
+  # hexo html
+  - cp backup/blog/* . -R     # 拷贝blog文件
+  - cp _posts source/ -R # 拷贝文章文件
+  - npm install
+  - git config user.name "Xuezhi.Zhang"
+  - git config user.email "algoboy@126.com"
+  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
+  - cat _config.yml
+
+# 执行清缓存，生成网页操作
+script:
+  # hexo html
+  - hexo clean
+  - hexo generate # generate static files
+  # ##################
+  # # sphinx
+  # # 生成 md格式文档
+  # - python backup/sphinx/gen_source_del_header.py
+
+  # # 构建 pdf文档：build/latex/sphinx.pdf
+  # - python backup/sphinx/gen_source_pdf.py # 构建 index.rst
+  # - cd backup/sphinx
+  # - make latexpdf
+  # - cp build/latex/leetcodecrowdsource.pdf ../../LeetCodeCrowdsource.pdf
+  # - cd ../../
+  
+  # # 构建 html文档：doc/build
+  # - python backup/sphinx/gen_source_html.py # 构建 index.rst
+  # - travis-sphinx build --source=./backup/sphinx/source --nowarn
+  # - cp ./LeetCodeCrowdsource.pdf doc/build/
 
 after_success:
-    - travis-sphinx deploy -b master -c "leetcode.xuezhisd.top" -m "update blog automatically by travis."
+  - hexo deploy
