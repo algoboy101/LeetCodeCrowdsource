@@ -786,8 +786,8 @@ gitalk:
   enable: true
   github_id: algoboy101 # GitHub repo owner
   repo: note_blog_comment # Repository name to store issues
-  client_id: 5d7851a991d55468095a # GitHub Application Client ID
-  client_secret: eb16a65b938a0160c3380a324e3a49b0bf5be67a # GitHub Application Client Secret
+  client_id: 8596e7b26382f538cd0d # GitHub Application Client ID
+  client_secret: 273c7fcb29697426154b308fb1e34317664ed029 # GitHub Application Client Secret
   admin_user: algoboy101 # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
