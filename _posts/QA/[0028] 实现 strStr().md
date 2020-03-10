@@ -22,7 +22,7 @@ date: 2020-03-07 00:00:28
 
 
 # [0028] 实现 strStr()
-* 
+* https://leetcode-cn.com/problems/implement-strstr
 
 
 ## 题目描述

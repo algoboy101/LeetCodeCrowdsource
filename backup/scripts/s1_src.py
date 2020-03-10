@@ -7,6 +7,7 @@
     d["name"] = name
     d["title"] = build_title(index, name)
     d["url_leetcode_cn"] = url_leetcode_cn
+    d["url_leetcode"]
 """
 
 
@@ -53,10 +54,19 @@ def get_name(s):
 解析 leetcode_cn 链接
 """
 def get_url(s):
-    item = s.split(")")[0]
-    item = item.split("(")[1]
-    res = item.strip()
+    ind = s.find("https")
+    s = s[ind:]
+    res = s.split(")")[0]
+    # item = item.split("(")[1]
+    # res = item.strip()
     return res
+
+"""
+解析 leetcode_en 链接
+"""
+def get_url_en(url_cn):
+    url_en = url_cn.replace("https://leetcode-cn.com", "https://leetcode.com")
+    return url_en
 
 """
 通过index和name构建title
@@ -85,12 +95,14 @@ for line in lines:
     name = get_name(line[2])
     title = build_title(index, name)
     url_leetcode_cn = get_url(line[2])
+    url_leetcode_en = get_url_en(url_leetcode_cn)
     fname = build_fname(title)
     url_github = url_github_prefix + urllib.quote(fname)
     d["index"] = index
     d["name"] = name
     d["title"] = title
     d["url_leetcode_cn"] = url_leetcode_cn
+    d["url_leetcode_en"] = url_leetcode_en
     d["url_github"] = url_github
 
     data[index] = d

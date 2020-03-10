@@ -22,7 +22,7 @@ date: 2020-03-07 00:00:50
 
 
 # [0050] Pow(x, n)
-* x, n
+* https://leetcode-cn.com/problems/powx-n
 
 
 ## 题目描述
