@@ -38,9 +38,9 @@ root: /
 # permalink: :year/:month/:day/:title/
 # permalink: post/:lang/:title.html
 #permalink: post/:lang/:abbrlink.html
-permalink: :abbrlink.html
+permalink: post/:abbrlink.html
 abbrlink:
-  alg: crc16
+  alg: crc32
   rep: hex
 #permalink: post/:id_:title.html
 # permalink: :title/
