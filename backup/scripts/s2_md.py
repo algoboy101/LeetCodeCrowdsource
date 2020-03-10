@@ -79,6 +79,9 @@ for fname in files_md:
 
     # 遍历当前文件的所有行
     for line in lines:
+        # 处理{{}}
+        if "[1096]" in fname:
+            line = line.replace("{{", "{\\{")
 
         # 处理 图片链接
         if "http" in line and  "img" in line:
@@ -105,6 +108,9 @@ for fname in files_md:
             # for t in topic:
             #     print t
             # print topic
+        
+
+            
             
     # print desc
     # print "\n\n\n\n"
