@@ -20,6 +20,8 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 5] 发 LeetCoin
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5BLCP%205%5D%20%E5%8F%91%20LeetCoin.md)
+* http://leetcode.xuezhisd.top/post/2bab6dba.html
 * https://leetcode.com/problems/coin-bonus
 * https://leetcode-cn.com/problems/coin-bonus
 

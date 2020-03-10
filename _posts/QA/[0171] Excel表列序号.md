@@ -21,6 +21,8 @@ date: 2020-03-07 00:02:51
 
 
 # [0171] Excel表列序号
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0171%5D%20Excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7.md)
+* http://leetcode.xuezhisd.top/post/60ecae1f.html
 * https://leetcode.com/problems/excel-sheet-column-number
 * https://leetcode-cn.com/problems/excel-sheet-column-number
 

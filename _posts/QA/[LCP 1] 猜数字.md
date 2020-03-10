@@ -20,6 +20,8 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 1] 猜数字
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5BLCP%201%5D%20%E7%8C%9C%E6%95%B0%E5%AD%97.md)
+* http://leetcode.xuezhisd.top/post/efefec7a.html
 * https://leetcode.com/problems/guess-numbers
 * https://leetcode-cn.com/problems/guess-numbers
 

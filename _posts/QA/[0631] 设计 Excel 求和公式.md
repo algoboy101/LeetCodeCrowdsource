@@ -21,6 +21,8 @@ date: 2020-03-07 00:10:31
 
 
 # [0631] 设计 Excel 求和公式
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0631%5D%20%E8%AE%BE%E8%AE%A1%20Excel%20%E6%B1%82%E5%92%8C%E5%85%AC%E5%BC%8F.md)
+* http://leetcode.xuezhisd.top/post/9fb441.html
 * https://leetcode.com/problems/design-excel-sum-formula
 * https://leetcode-cn.com/problems/design-excel-sum-formula
 

@@ -20,6 +20,8 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 4] 覆盖
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5BLCP%204%5D%20%E8%A6%86%E7%9B%96.md)
+* http://leetcode.xuezhisd.top/post/76d4edfd.html
 * https://leetcode.com/problems/broken-board-dominoes
 * https://leetcode-cn.com/problems/broken-board-dominoes
 

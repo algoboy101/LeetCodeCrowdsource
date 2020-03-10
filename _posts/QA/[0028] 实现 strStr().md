@@ -22,6 +22,8 @@ date: 2020-03-07 00:00:28
 
 
 # [0028] 实现 strStr()
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0028%5D%20%E5%AE%9E%E7%8E%B0%20strStr%28%29.md)
+* http://leetcode.xuezhisd.top/post/e92fc7c8.html
 * https://leetcode.com/problems/implement-strstr
 * https://leetcode-cn.com/problems/implement-strstr
 

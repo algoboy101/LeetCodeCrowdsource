@@ -21,6 +21,8 @@ date: 2020-03-07 00:02:38
 
 
 # [0158] 用 Read4 读取 N 个字符 II
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0158%5D%20%E7%94%A8%20Read4%20%E8%AF%BB%E5%8F%96%20N%20%E4%B8%AA%E5%AD%97%E7%AC%A6%20II.md)
+* http://leetcode.xuezhisd.top/post/42591b48.html
 * https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times
 * https://leetcode-cn.com/problems/read-n-characters-given-read4-ii-call-multiple-times
 

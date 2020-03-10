@@ -20,6 +20,8 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 2] 分式化简
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5BLCP%202%5D%20%E5%88%86%E5%BC%8F%E5%8C%96%E7%AE%80.md)
+* http://leetcode.xuezhisd.top/post/ad59c487.html
 * https://leetcode.com/problems/deep-dark-fraction
 * https://leetcode-cn.com/problems/deep-dark-fraction
 

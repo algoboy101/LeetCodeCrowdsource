@@ -22,6 +22,8 @@ date: 2020-03-07 00:07:50
 
 
 # [0470] 用 Rand7() 实现 Rand10()
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0470%5D%20%E7%94%A8%20Rand7%28%29%20%E5%AE%9E%E7%8E%B0%20Rand10%28%29.md)
+* http://leetcode.xuezhisd.top/post/92e2190c.html
 * https://leetcode.com/problems/implement-rand10-using-rand7
 * https://leetcode-cn.com/problems/implement-rand10-using-rand7
 

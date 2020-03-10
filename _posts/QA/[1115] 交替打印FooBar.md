@@ -20,6 +20,8 @@ date: 2020-03-07 00:18:35
 
 
 # [1115] 交替打印FooBar
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B1115%5D%20%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0FooBar.md)
+* http://leetcode.xuezhisd.top/post/c81c1479.html
 * https://leetcode.com/problems/print-foobar-alternately
 * https://leetcode-cn.com/problems/print-foobar-alternately
 

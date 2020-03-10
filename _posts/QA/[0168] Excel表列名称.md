@@ -21,6 +21,8 @@ date: 2020-03-07 00:02:48
 
 
 # [0168] Excel表列名称
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0168%5D%20Excel%E8%A1%A8%E5%88%97%E5%90%8D%E7%A7%B0.md)
+* http://leetcode.xuezhisd.top/post/e64fd03c.html
 * https://leetcode.com/problems/excel-sheet-column-title
 * https://leetcode-cn.com/problems/excel-sheet-column-title
 

@@ -22,6 +22,8 @@ date: 2020-03-07 00:00:50
 
 
 # [0050] Pow(x, n)
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0050%5D%20Pow%28x%2C%20n%29.md)
+* http://leetcode.xuezhisd.top/post/f02e0f90.html
 * https://leetcode.com/problems/powx-n
 * https://leetcode-cn.com/problems/powx-n
 

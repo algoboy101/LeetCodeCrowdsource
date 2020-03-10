@@ -22,6 +22,8 @@ date: 2020-03-07 00:11:55
 
 
 # [0715] Range 模块
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0715%5D%20Range%20%E6%A8%A1%E5%9D%97.md)
+* http://leetcode.xuezhisd.top/post/565ffd4b.html
 * https://leetcode.com/problems/range-module
 * https://leetcode-cn.com/problems/range-module
 

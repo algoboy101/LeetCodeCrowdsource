@@ -21,6 +21,8 @@ date: 2020-03-07 00:16:24
 
 
 # [0984] 不含 AAA 或 BBB 的字符串
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0984%5D%20%E4%B8%8D%E5%90%AB%20AAA%20%E6%88%96%20BBB%20%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2.md)
+* http://leetcode.xuezhisd.top/post/667b6383.html
 * https://leetcode.com/problems/string-without-aaa-or-bbb
 * https://leetcode-cn.com/problems/string-without-aaa-or-bbb
 

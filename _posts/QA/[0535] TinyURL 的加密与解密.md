@@ -22,6 +22,8 @@ date: 2020-03-07 00:08:55
 
 
 # [0535] TinyURL 的加密与解密
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0535%5D%20TinyURL%20%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86.md)
+* http://leetcode.xuezhisd.top/post/5985604b.html
 * https://leetcode.com/problems/encode-and-decode-tinyurl
 * https://leetcode-cn.com/problems/encode-and-decode-tinyurl
 

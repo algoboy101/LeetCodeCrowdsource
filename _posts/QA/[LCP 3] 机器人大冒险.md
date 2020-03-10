@@ -20,6 +20,8 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 3] 机器人大冒险
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5BLCP%203%5D%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%A4%A7%E5%86%92%E9%99%A9.md)
+* http://leetcode.xuezhisd.top/post/74595290.html
 * https://leetcode.com/problems/programmable-robot
 * https://leetcode-cn.com/problems/programmable-robot
 

@@ -21,6 +21,8 @@ date: 2020-03-07 00:11:52
 
 
 # [0712] 两个字符串的最小ASCII删除和
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0712%5D%20%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%8FASCII%E5%88%A0%E9%99%A4%E5%92%8C.md)
+* http://leetcode.xuezhisd.top/post/3d0b80dd.html
 * https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings
 * https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings
 

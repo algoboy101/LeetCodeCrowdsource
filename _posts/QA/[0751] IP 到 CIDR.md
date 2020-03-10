@@ -21,6 +21,8 @@ date: 2020-03-07 00:12:31
 
 
 # [0751] IP 到 CIDR
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0751%5D%20IP%20%E5%88%B0%20CIDR.md)
+* http://leetcode.xuezhisd.top/post/7e27db00.html
 * https://leetcode.com/problems/ip-to-cidr
 * https://leetcode-cn.com/problems/ip-to-cidr
 

@@ -21,6 +21,8 @@ date: 2020-03-07 00:17:58
 
 
 # [1078] Bigram 分词
+* [GitHub](https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B1078%5D%20Bigram%20%E5%88%86%E8%AF%8D.md)
+* http://leetcode.xuezhisd.top/post/63b83a7e.html
 * https://leetcode.com/problems/occurrences-after-bigram
 * https://leetcode-cn.com/problems/occurrences-after-bigram
 
