@@ -21,6 +21,7 @@ date: 2020-03-07 00:02:48
 
 
 # [0168] Excel表列名称
+* https://leetcode.com/problems/excel-sheet-column-title
 * https://leetcode-cn.com/problems/excel-sheet-column-title
 
 

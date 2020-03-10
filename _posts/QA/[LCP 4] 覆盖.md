@@ -20,6 +20,7 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 4] 覆盖
+* https://leetcode.com/problems/broken-board-dominoes
 * https://leetcode-cn.com/problems/broken-board-dominoes
 
 

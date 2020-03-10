@@ -22,6 +22,7 @@ date: 2020-03-07 00:08:55
 
 
 # [0535] TinyURL 的加密与解密
+* https://leetcode.com/problems/encode-and-decode-tinyurl
 * https://leetcode-cn.com/problems/encode-and-decode-tinyurl
 
 

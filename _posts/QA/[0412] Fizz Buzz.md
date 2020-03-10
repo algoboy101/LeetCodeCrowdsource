@@ -20,6 +20,7 @@ date: 2020-03-07 00:06:52
 
 
 # [0412] Fizz Buzz
+* https://leetcode.com/problems/fizz-buzz
 * https://leetcode-cn.com/problems/fizz-buzz
 
 

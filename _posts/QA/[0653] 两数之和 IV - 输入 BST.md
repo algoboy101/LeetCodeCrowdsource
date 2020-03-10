@@ -21,6 +21,7 @@ date: 2020-03-07 00:10:53
 
 
 # [0653] 两数之和 IV - 输入 BST
+* https://leetcode.com/problems/two-sum-iv-input-is-a-bst
 * https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst
 
 

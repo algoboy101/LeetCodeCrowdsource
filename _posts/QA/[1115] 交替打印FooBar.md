@@ -20,6 +20,7 @@ date: 2020-03-07 00:18:35
 
 
 # [1115] 交替打印FooBar
+* https://leetcode.com/problems/print-foobar-alternately
 * https://leetcode-cn.com/problems/print-foobar-alternately
 
 

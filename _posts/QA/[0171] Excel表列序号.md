@@ -21,6 +21,7 @@ date: 2020-03-07 00:02:51
 
 
 # [0171] Excel表列序号
+* https://leetcode.com/problems/excel-sheet-column-number
 * https://leetcode-cn.com/problems/excel-sheet-column-number
 
 

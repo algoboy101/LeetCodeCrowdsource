@@ -20,6 +20,7 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 3] 机器人大冒险
+* https://leetcode.com/problems/programmable-robot
 * https://leetcode-cn.com/problems/programmable-robot
 
 

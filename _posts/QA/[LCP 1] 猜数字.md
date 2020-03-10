@@ -20,6 +20,7 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 1] 猜数字
+* https://leetcode.com/problems/guess-numbers
 * https://leetcode-cn.com/problems/guess-numbers
 
 

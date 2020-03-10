@@ -22,6 +22,7 @@ date: 2020-03-07 00:08:52
 
 
 # [0532] 数组中的K-diff数对
+* https://leetcode.com/problems/k-diff-pairs-in-an-array
 * https://leetcode-cn.com/problems/k-diff-pairs-in-an-array
 
 

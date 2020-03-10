@@ -22,6 +22,7 @@ date: 2020-03-07 00:11:55
 
 
 # [0715] Range 模块
+* https://leetcode.com/problems/range-module
 * https://leetcode-cn.com/problems/range-module
 
 

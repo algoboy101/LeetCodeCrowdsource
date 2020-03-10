@@ -21,6 +21,7 @@ date: 2020-03-07 00:10:31
 
 
 # [0631] 设计 Excel 求和公式
+* https://leetcode.com/problems/design-excel-sum-formula
 * https://leetcode-cn.com/problems/design-excel-sum-formula
 
 

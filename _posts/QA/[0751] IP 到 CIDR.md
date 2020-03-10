@@ -21,6 +21,7 @@ date: 2020-03-07 00:12:31
 
 
 # [0751] IP 到 CIDR
+* https://leetcode.com/problems/ip-to-cidr
 * https://leetcode-cn.com/problems/ip-to-cidr
 
 

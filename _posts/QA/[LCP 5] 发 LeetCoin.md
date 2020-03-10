@@ -20,6 +20,7 @@ date: 2020-03-07 20:60:60
 
 
 # [LCP 5] 发 LeetCoin
+* https://leetcode.com/problems/coin-bonus
 * https://leetcode-cn.com/problems/coin-bonus
 
 
