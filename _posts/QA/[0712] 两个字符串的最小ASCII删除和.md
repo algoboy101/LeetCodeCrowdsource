@@ -61,18 +61,6 @@ date: 2020-03-07 00:11:52
 <div><div>Related Topics</div><div><li>动态规划</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    int minimumDeleteSum(string s1, string s2) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

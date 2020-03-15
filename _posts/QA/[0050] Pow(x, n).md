@@ -60,18 +60,6 @@ date: 2020-03-07 00:00:50
 <div><div>Related Topics</div><div><li>数学</li><li>二分查找</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    double myPow(double x, int n) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

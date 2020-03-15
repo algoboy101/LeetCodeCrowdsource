@@ -63,18 +63,6 @@ date: 2020-03-07 20:60:60
 
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    int game(vector<int>& guess, vector<int>& answer) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

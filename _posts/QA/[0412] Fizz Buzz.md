@@ -63,18 +63,6 @@ date: 2020-03-07 00:06:52
 
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    vector<string> fizzBuzz(int n) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

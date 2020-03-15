@@ -55,18 +55,6 @@ date: 2020-03-07 00:00:28
 <div><div>Related Topics</div><div><li>双指针</li><li>字符串</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    int strStr(string haystack, string needle) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

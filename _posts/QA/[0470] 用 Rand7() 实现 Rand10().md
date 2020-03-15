@@ -80,22 +80,6 @@ date: 2020-03-07 00:07:50
 <div><div>Related Topics</div><div><li>Random</li><li>Rejection Sampling</li></div></div>
 
 
-## 题目代码
-
-```cpp
-// The rand7() API is already defined for you.
-// int rand7();
-// @return a random integer in the range 1 to 7
-
-class Solution {
-public:
-    int rand10() {
-        
-    }
-};
-```
-
-
 ## 题目解析
 
 

@@ -60,18 +60,6 @@ date: 2020-03-07 00:17:58
 <div><div>Related Topics</div><div><li>哈希表</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    vector<string> findOcurrences(string text, string first, string second) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

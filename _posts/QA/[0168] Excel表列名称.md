@@ -63,18 +63,6 @@ date: 2020-03-07 00:02:48
 <div><div>Related Topics</div><div><li>数学</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    string convertToTitle(int n) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

@@ -66,18 +66,6 @@ date: 2020-03-07 00:02:51
 <div><div>Related Topics</div><div><li>数学</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    int titleToNumber(string s) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

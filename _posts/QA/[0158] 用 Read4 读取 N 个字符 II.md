@@ -94,26 +94,6 @@ sol.read(buf, 1); // 由于已经到达了文件末尾，没有更多的字符�
 <div><div>Related Topics</div><div><li>字符串</li></div></div>
 
 
-## 题目代码
-
-```cpp
-// Forward declaration of the read4 API.
-int read4(char *buf);
-
-class Solution {
-public:
-    /**
-     * @param buf Destination buffer
-     * @param n   Number of characters to read
-     * @return    The number of actual characters read
-     */
-    int read(char *buf, int n) {
-        
-    }
-};
-```
-
-
 ## 题目解析
 
 

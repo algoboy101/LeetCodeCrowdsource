@@ -73,18 +73,6 @@ date: 2020-03-07 20:60:60
 
 
 
-## 题目代码
-
-```cpp
-class Solution {
-public:
-    bool robot(string command, vector<vector<int>>& obstacles, int x, int y) {
-
-    }
-};
-```
-
-
 ## 题目解析
 
 

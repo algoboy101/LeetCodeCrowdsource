@@ -97,38 +97,6 @@ Set(2, &quot;B&quot;, 2);
 <div><div>Related Topics</div><div><li>设计</li></div></div>
 
 
-## 题目代码
-
-```cpp
-class Excel {
-public:
-    Excel(int H, char W) {
-
-    }
-    
-    void set(int r, char c, int v) {
-
-    }
-    
-    int get(int r, char c) {
-
-    }
-    
-    int sum(int r, char c, vector<string> strs) {
-
-    }
-};
-
-/**
- * Your Excel object will be instantiated and called as such:
- * Excel* obj = new Excel(H, W);
- * obj->set(r,c,v);
- * int param_2 = obj->get(r,c);
- * int param_3 = obj->sum(r,c,strs);
- */
-```
-
-
 ## 题目解析
 
 
