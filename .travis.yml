@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+
+cache: npm
+
+cache:
+  directories:
+    - node_modules
+
+branches:
+  only:
+    - master # build master branch only
+
+#在构建之前安装hexo环境
+before_install:
+  - sudo apt-get update
+  
+install:
+  # hexo html
+  - npm install -g hexo-cli
+
+before_script:
+  # hexo html
+  - cp backup/blog/* . -R     # 拷贝blog文件
+  - cp _posts source/ -R # 拷贝文章文件
+  - npm install
+  - git config user.name "Xuezhi.Zhang"
+  - git config user.email "algoboy@126.com"
+  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
+  # - cat _config.yml
+
+# 执行清缓存，生成网页操作
+script:
+  # hexo html ./public
+  - hexo clean
+  - hexo generate # generate static files
+  # - ls public
+
+after_success:
+  - hexo deploy
