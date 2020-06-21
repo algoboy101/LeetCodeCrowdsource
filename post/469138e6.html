@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <meta name="google-site-verification" content="8MClfGIKqlhvS7lCIUORoPlPQW5ZS-acECTz66SI-q0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":true},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="...">
+<meta name="keywords" content="leetcode,题解,数学,动态规划,双指针查找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[0887] 鸡蛋掉落">
+<meta property="og:url" content="http:&#x2F;&#x2F;leetcode.xuezhisd.top&#x2F;post&#x2F;469138e6.html">
+<meta property="og:site_name" content="LeetCodeCrowdsource">
+<meta property="og:description" content="...">
+<meta property="og:locale" content="QA">
+<meta property="og:image" content="http:&#x2F;&#x2F;leetcode.xuezhisd.top&#x2F;Users&#x2F;chenbinbin&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20200616174349810.png">
+<meta property="og:updated_time" content="2020-06-21T09:05:25.588Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;leetcode.xuezhisd.top&#x2F;Users&#x2F;chenbinbin&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20200616174349810.png">
+
+<link rel="canonical" href="http://leetcode.xuezhisd.top/post/469138e6.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>[0887] 鸡蛋掉落 | LeetCodeCrowdsource</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ce9a310dfefd1aeba54748007375c4d9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LeetCodeCrowdsource</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="QA">
+    <link itemprop="mainEntityOfPage" href="http://leetcode.xuezhisd.top/post/469138e6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LeetCode">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeetCodeCrowdsource">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          [0887] 鸡蛋掉落<a href="https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/[0887]%20%E9%B8%A1%E8%9B%8B%E6%8E%89%E8%90%BD.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+        </h2>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-07 00:14:47" itemprop="dateCreated datePublished" datetime="2020-03-07T00:14:47+08:00">2020-03-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-21 17:05:25" itemprop="dateModified" datetime="2020-06-21T17:05:25+08:00">2020-06-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+            <div class="post-description">...</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="0887-鸡蛋掉落"><a href="#0887-鸡蛋掉落" class="headerlink" title="[0887] 鸡蛋掉落"></a>[0887] 鸡蛋掉落</h1><ul>
+<li><a href="https://github.com/algoboy101/LeetCodeCrowdsource/tree/master/_posts/QA/%5B0887%5D%20%E9%B8%A1%E8%9B%8B%E6%8E%89%E8%90%BD.md" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="http://leetcode.xuezhisd.top/post/469138e6.html">http://leetcode.xuezhisd.top/post/469138e6.html</a></li>
+<li><a href="https://leetcode.com/problems/super-egg-drop" target="_blank" rel="noopener">https://leetcode.com/problems/super-egg-drop</a></li>
+<li><a href="https://leetcode-cn.com/problems/super-egg-drop" target="_blank" rel="noopener">https://leetcode-cn.com/problems/super-egg-drop</a></li>
+</ul>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>你将获得&nbsp;<code>K</code>&nbsp;个鸡蛋，并可以使用一栋从&nbsp;<code>1</code>&nbsp;到&nbsp;<code>N</code>&nbsp;&nbsp;共有 <code>N</code>&nbsp;层楼的建筑。</p>
+
+<p>每个蛋的功能都是一样的，如果一个蛋碎了，你就不能再把它掉下去。</p>
+
+<p>你知道存在楼层&nbsp;<code>F</code> ，满足&nbsp;<code>0 &lt;= F &lt;= N</code> 任何从高于 <code>F</code>&nbsp;的楼层落下的鸡蛋都会碎，从&nbsp;<code>F</code>&nbsp;楼层或比它低的楼层落下的鸡蛋都不会破。</p>
+
+<p>每次<em>移动</em>，你可以取一个鸡蛋（如果你有完整的鸡蛋）并把它从任一楼层&nbsp;<code>X</code>&nbsp;扔下（满足&nbsp;<code>1 &lt;= X &lt;= N</code>）。</p>
+
+<p>你的目标是<strong>确切地</strong>知道 <code>F</code> 的值是多少。</p>
+
+<p>无论 <code>F</code> 的初始值如何，你确定 <code>F</code> 的值的最小移动次数是多少？</p>
+
+<p>&nbsp;</p>
+
+<ol>
+</ol>
+
+<p><strong>示例 1：</strong></p>
+
+<pre><strong>输入：</strong>K = 1, N = 2
+<strong>输出：</strong>2
+<strong>解释：</strong>
+鸡蛋从 1 楼掉落。如果它碎了，我们肯定知道 F = 0 。
+否则，鸡蛋从 2 楼掉落。如果它碎了，我们肯定知道 F = 1 。
+如果它没碎，那么我们肯定知道 F = 2 。
+因此，在最坏的情况下我们需要移动 2 次以确定 F 是多少。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre><strong>输入：</strong>K = 2, N = 6
+<strong>输出：</strong>3
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre><strong>输入：</strong>K = 3, N = 14
+<strong>输出：</strong>4
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<p><ol>
+    <li><code>1 &lt;= K &lt;= 100</code></li>
+    <li><code>1 &lt;= N &lt;= 10000</code></li>
+</ol></p>
+<div><div>Related Topics</div><div><li>数学</li><li>二分查找</li><li>动态规划</li></div></div>
+
+<h2 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h2><ul>
+<li>可以使用动态规则的思路去解决本题，加上细节优化，这是动态规则类题目比较常见的一种考查模式，大致方法正确但是普通做法复杂度有点高，要通过其他知识进行优化。</li>
+</ul>
+<h3 id="不确定性"><a href="#不确定性" class="headerlink" title="不确定性"></a>不确定性</h3><ul>
+<li>本题的题意和条件非常明确。</li>
+<li>结果应该是最坏情况下的最小移动次数。</li>
+</ul>
+<h3 id="方法一：双指针查找"><a href="#方法一：双指针查找" class="headerlink" title="方法一：双指针查找"></a>方法一：双指针查找</h3><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><ul>
+<li>对于确定的k,n 来说答案是固定的，那么我们不妨设解为dp(k, n)。</li>
+<li>那么我们先考虑第一个鸡蛋应该在哪一层掉下，无非是2种结果(碎了和不碎)，可以根据结果转移到新的k’,n’。</li>
+<li>以上分析可以看出这题非常适合使用动态规则来做。</li>
+</ul>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
+<li>设dp(i, j) 为有i个鸡蛋，j层楼时确定F所需要的小移动次数。</li>
+<li>显然，dp(1, j) = j, 此时只有一只鸡蛋所以一层一层试(0层不需要试，也是符合题意的)。 dp(i, 1) = 1 (i&gt;=1), 只有一层试一次就够了。</li>
+<li>接下来讨论j&gt;1, i&gt;1的情况。我们先拿一个鸡蛋放在x(1=&lt;x&lt;=j)层掉下，有2种情况</li>
+<li>蛋碎了，说明再往上的都不行，楼层要下降，鸡蛋减少1个，结果是 1+dp(i-1, x-1)</li>
+<li>蛋没碎，说明再往下都不会破，楼层要上升，鸡蛋保持原有数量，结果是1+dp(i, j-x)</li>
+<li>每次尝试取最坏的结果 max{1+dp(i-1, x-1), 1+dp(i, j-x)}, 一共尝试j次，取其中的最好结果</li>
+<li>dp(i,j) = min{max{1+dp(i-1, x-1), 1+dp(i, j-x)}} (1=&lt;x&lt;=j)</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">superEggDrop(K,N)&#123;	</span><br><span class="line">	<span class="keyword">for</span> (int <span class="built_in">j</span>=<span class="number">1</span>;<span class="built_in">j</span>&lt;=N;++<span class="built_in">j</span>) dp[<span class="number">1</span>][<span class="built_in">j</span>]=<span class="built_in">j</span>;</span><br><span class="line">  <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=K;++<span class="built_in">i</span>) dp[<span class="built_in">i</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">2</span>;<span class="built_in">i</span>&lt;=K;++<span class="built_in">i</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(int <span class="built_in">j</span>=<span class="number">2</span>;<span class="built_in">j</span>&lt;=N;++<span class="built_in">j</span>) &#123;</span><br><span class="line">      <span class="keyword">for</span>(int x=<span class="number">1</span>;x&lt;=<span class="built_in">j</span>;++x)&#123;</span><br><span class="line">       	dp[<span class="built_in">i</span>][<span class="built_in">j</span>] = <span class="built_in">min</span> (dp[<span class="built_in">i</span>][<span class="built_in">j</span>], <span class="built_in">max</span>(<span class="number">1</span>+dp[<span class="built_in">i</span><span class="number">-1</span>][x<span class="number">-1</span>], <span class="number">1</span>+dp[<span class="built_in">i</span>], [<span class="built_in">j</span>-x]))</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> dp[K][N]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>从上面代码中可以看出，有3重循环，对于 k=100, N=10000来说，显然是要超时。时间复杂度太高，需要优化。</li>
+<li><p><img alt="image-20200616174349810" data-src="/Users/chenbinbin/Library/Application Support/typora-user-images/image-20200616174349810.png"></p>
+</li>
+<li><p>我们用上图表示dp中的2行，首先分析一下dp矩阵的值的规律，红色箭头表示，对于同等数量的鸡蛋，尝试次数会随着楼层呈现非递减。对于同一楼层，尝试次数会随着鸡蛋呈现非递减。</p>
+</li>
+<li>基于上述分析，现在要求解dp(i+1,j) = min{max{1+dp(i, x-1), 1+dp(i+1, j-x)}} (1=&lt;x&lt;=j)，其实是要找到一个p1(p1=x-1), p2(p2=j-x)使得dp(i, p1), dp(i+1, p2)差值最小。</li>
+<li>这里要说明一下p1肯定是&lt;=p2的是，如果p2<p1, 那么当p1-1="p2时，dp(i," p1)>=dp(i, p1-1), dp(i+1, p2)&gt;=dp(i, p1-1)。当p1-1=p2+1时，dp(i+1, p2+1)最多比dp(i,p1-1)大1且 dp(i, p1)&gt;=dp(i,p1-1) 。上述2种情况都不会比p1&lt;=p2更优。</p1,></li>
+<li>现在假设j=4时，找到了p1, p2使得最优解成立，现在j增加到5了，那么只要把p2变成p3继续与p1比较即可。分析如下：</li>
+<li>由于dp(i, p1)&lt;=dp(i+1, p2)&lt;=dp(i+1, p3), 所以p3越往后，整体的值肯定是越大的，就没必要往后找了。往中间移动即可。</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">优化后思路</span><br><span class="line">superEggDrop(K,N)&#123;	</span><br><span class="line">	<span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">1</span>;j&lt;=N;++j) dp[<span class="number">1</span>][j]=j;</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;=K;++i) dp[i][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">2</span>;i&lt;=K;++i) &#123;</span><br><span class="line">      <span class="built_in">int</span> p1=<span class="number">0</span>, p2=<span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="built_in">int</span> j=<span class="number">2</span>;j&lt;=N;++j) &#123;</span><br><span class="line">        p2++;</span><br><span class="line">        <span class="keyword">for</span>(;p1+<span class="number">1</span>&lt;=p2<span class="number">-1</span> &amp;&amp; dp[i<span class="number">-1</span>][p1+<span class="number">1</span>]&lt;=dp[i][p2<span class="number">-1</span>];p1++, p2--); <span class="comment">//尽量往中间移动，使得差值越小越好</span></span><br><span class="line">        dp[i][j] = dp[i][p2]+<span class="number">1</span>;  </span><br><span class="line">  		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> dp[K][N]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>里面的p1, p2 对于一个i循环来说最多移动N次，总体时间复杂度是O(k*n)</li>
+</ul>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>动态规则</li>
+<li>复杂度优化</li>
+</ul>
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
+<li>时间复杂度O(k*n)</li>
+<li>空间复杂度O(k*n)</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">outDp</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; dp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> v : dp) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">auto</span> d:v)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%3d"</span>, d);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">superEggDrop</span><span class="params">(<span class="keyword">int</span> K, <span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; dp(K+<span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(N+<span class="number">1</span>, <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=N;++j) dp[<span class="number">1</span>][j]=j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=K;++i) dp[i][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=K;++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> p1=<span class="number">0</span>, p2=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;=N;++j) &#123;</span><br><span class="line">                p2++;</span><br><span class="line">                <span class="keyword">for</span>(;p1+<span class="number">1</span>&lt;=p2<span class="number">-1</span> &amp;&amp; dp[i<span class="number">-1</span>][p1+<span class="number">1</span>]&lt;=dp[i][p2<span class="number">-1</span>];p1++, p2--);</span><br><span class="line">                dp[i][j] = dp[i][p2]+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//cout&lt;&lt;endl;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//outDp(dp);</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[K][N];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 1</span></span><br><span class="line"><span class="comment"> 1</span></span><br><span class="line"><span class="comment"> 3</span></span><br><span class="line"><span class="comment">200</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">80</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">2</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">230</span></span><br><span class="line"><span class="comment">100</span></span><br><span class="line"><span class="comment">10000</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h2 id="相关题目"><a href="#相关题目" class="headerlink" title="相关题目"></a>相关题目</h2><ul>
+<li></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/post/3177c665.html" rel="bookmark">[0964] 表示数字的最少运算符</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/post/4deb10be.html" rel="bookmark">[0264] 丑数 II</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>陈彬彬
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://leetcode.xuezhisd.top/post/469138e6.html" title="[0887] 鸡蛋掉落">http://leetcode.xuezhisd.top/post/469138e6.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"><i class="fa fa-tag"></i> leetcode</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"><i class="fa fa-tag"></i> 题解</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E6%9F%A5%E6%89%BE/" rel="tag"><i class="fa fa-tag"></i> 双指针查找</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/post/c4feeb4e.html" rel="next" title="[0886] 可能的二分法">
+                  <i class="fa fa-chevron-left"></i> [0886] 可能的二分法
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/post/43336714.html" rel="prev" title="[0888] 公平的糖果交换">
+                  [0888] 公平的糖果交换 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0887-鸡蛋掉落"><span class="nav-number">1.</span> <span class="nav-text">[0887] 鸡蛋掉落</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目解析"><span class="nav-number">1.2.</span> <span class="nav-text">题目解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不确定性"><span class="nav-number">1.2.1.</span> <span class="nav-text">不确定性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：双指针查找"><span class="nav-number">1.2.2.</span> <span class="nav-text">方法一：双指针查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#知识点"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关题目"><span class="nav-number">1.3.</span> <span class="nav-text">相关题目</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">LeetCode</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="http://leetcodedoc.xuezhisd.top/" title="Docs → http:&#x2F;&#x2F;leetcodedoc.xuezhisd.top" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>Docs</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://leetcodedoc.xuezhisd.top/LeetCodeCrowdsource.pdf" title="PDF → http:&#x2F;&#x2F;leetcodedoc.xuezhisd.top&#x2F;LeetCodeCrowdsource.pdf" rel="noopener" target="_blank"><i class="fa fa-fw fa-file-pdf-o"></i>PDF</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/algoboy101/LeetCodeCrowdsource" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;algoboy101&#x2F;LeetCodeCrowdsource" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuezhisd.top/" title="https:&#x2F;&#x2F;blog.xuezhisd.top&#x2F;" rel="noopener" target="_blank">张学志</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/jianrenfang/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;jianrenfang&#x2F;" rel="noopener" target="_blank">方秋结</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+      
+      <!-- 
+      
+           <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="210" height="110" src="//music.163.com/outchain/player?type=2&id=5276811&auto=1&height=32"></iframe>
+           </div>
+      
+      -->
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeetCodeCrowdsource</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">17:11</span>
+</div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-581db2eae126635e" async="async"></script>
+  </div>
+
+        
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1273432675&web_id=1273432675"></script>
+  </div>
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes: 0,
+          toolbar: 0,
+          statusbar: 0,
+          pagemode: 'thumbs',
+          view: 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '850px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '8596e7b26382f538cd0d',
+      clientSecret: '273c7fcb29697426154b308fb1e34317664ed029',
+      repo: 'note_blog_comment',
+      owner: 'algoboy101',
+      admin: ['algoboy101'],
+      id: 'f453775b6d49e0a4f395fe63dbb802c2',
+        language: 'zh-CN',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>

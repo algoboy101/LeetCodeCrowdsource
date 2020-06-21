@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <meta name="google-site-verification" content="8MClfGIKqlhvS7lCIUORoPlPQW5ZS-acECTz66SI-q0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":true},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="LeetCodeCrowdsource">
+<meta property="og:url" content="http:&#x2F;&#x2F;leetcode.xuezhisd.top&#x2F;tags&#x2F;%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE&#x2F;index.html">
+<meta property="og:site_name" content="LeetCodeCrowdsource">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://leetcode.xuezhisd.top/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>标签: 二分查找 | LeetCodeCrowdsource</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ce9a310dfefd1aeba54748007375c4d9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LeetCodeCrowdsource</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  
+  
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">二分查找
+          <small>标签</small>
+        </h2>
+      </div>
+
+      
+    <div class="collection-year">
+      <h2 class="collection-header">2020</h2>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-04-24T15:19:35+08:00"
+              content="2020-04-24">
+          04-24
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/f1d2484d.html" itemprop="url">
+            <span itemprop="name">[0035] 搜索插入位置</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-04-23T09:00:29+08:00"
+              content="2020-04-23">
+          04-23
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/294b0aae.html" itemprop="url">
+            <span itemprop="name">[0029] 两数相除</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:22:31+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/8e4ce1d.html" itemprop="url">
+            <span itemprop="name">[1351] 统计有序矩阵中的负数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:22:17+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/c74afd56.html" itemprop="url">
+            <span itemprop="name">[1337] 方阵中战斗力最弱的 K 行</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:21:40+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ada5d63b.html" itemprop="url">
+            <span itemprop="name">[1300] 转变数组后最接近目标值的数组和</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:21:32+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/bed03edd.html" itemprop="url">
+            <span itemprop="name">[1292] 元素和小于等于阈值的正方形的最大边长</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:21:23+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/b55b755.html" itemprop="url">
+            <span itemprop="name">[1283] 使结果不超过阈值的最小除数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:20:37+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/3385f600.html" itemprop="url">
+            <span itemprop="name">[1237] 找出给定方程的正整数解</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:20:35+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e3ba9cc9.html" itemprop="url">
+            <span itemprop="name">[1235] 规划兼职工作</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:20:31+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/775d6298.html" itemprop="url">
+            <span itemprop="name">[1231] 分享巧克力</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:20:01+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ba130a16.html" itemprop="url">
+            <span itemprop="name">[1201] 丑数 III</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:19:58+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/3ff50670.html" itemprop="url">
+            <span itemprop="name">[1198] 找出所有行中最小公共元素</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:19:42+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/3f22f8b7.html" itemprop="url">
+            <span itemprop="name">[1182] 与目标颜色间的最短距离</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:19:17+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/1c55e04.html" itemprop="url">
+            <span itemprop="name">[1157] 子数组中占绝大多数的元素</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:19:10+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/848e530e.html" itemprop="url">
+            <span itemprop="name">[1150] 检查一个数是否在数组中占绝大多数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:18:31+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/eaf4d989.html" itemprop="url">
+            <span itemprop="name">[1111] 有效括号的嵌套深度</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:18:15+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/aa4068a0.html" itemprop="url">
+            <span itemprop="name">[1095] 山脉数组中查找目标值</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:17:44+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/45da8890.html" itemprop="url">
+            <span itemprop="name">[1064] 不动点</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:17:40+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/51fd1809.html" itemprop="url">
+            <span itemprop="name">[1060] 有序数组中的缺失元素</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:17:24+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/a5593e98.html" itemprop="url">
+            <span itemprop="name">[1044] 最长重复子串</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:16:51+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/665cb0cf.html" itemprop="url">
+            <span itemprop="name">[1011] 在 D 天内送达包裹的能力</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:16:21+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/68606373.html" itemprop="url">
+            <span itemprop="name">[0981] 基于时间的键值存储</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:15:27+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/78b5bbd0.html" itemprop="url">
+            <span itemprop="name">[0927] 三等分</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:15:11+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/c48d950f.html" itemprop="url">
+            <span itemprop="name">[0911] 在线选举</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:14:38+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/8f93bee6.html" itemprop="url">
+            <span itemprop="name">[0878] 第 N 个神奇数字</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:14:35+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/a342cef3.html" itemprop="url">
+            <span itemprop="name">[0875] 爱吃香蕉的珂珂</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:14:22+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ff4f9e38.html" itemprop="url">
+            <span itemprop="name">[0862] 和至少为 K 的最短子数组</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:14:12+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/1563cfbe.html" itemprop="url">
+            <span itemprop="name">[0852] 山脉数组的峰顶索引</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:13:13+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/2881f717.html" itemprop="url">
+            <span itemprop="name">[0793] 阶乘函数后K个零</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:13:06+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/f99f76c0.html" itemprop="url">
+            <span itemprop="name">[0786] 第 K 个最小的素数分数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:12:58+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/da4da6d8.html" itemprop="url">
+            <span itemprop="name">[0778] 水位上升的泳池中游泳</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:12:54+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/5b31e2df.html" itemprop="url">
+            <span itemprop="name">[0774] 最小化去加油站的最大距离</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:12:24+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ad28ce0c.html" itemprop="url">
+            <span itemprop="name">[0744] 寻找比目标字母大的最小字母</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:11:59+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ac9aa080.html" itemprop="url">
+            <span itemprop="name">[0719] 找出第 k 小的距离对</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:11:58+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/9398aefb.html" itemprop="url">
+            <span itemprop="name">[0718] 最长重复子数组</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:11:50+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/9aa82300.html" itemprop="url">
+            <span itemprop="name">[0710] 黑名单中的随机数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:11:44+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/43420509.html" itemprop="url">
+            <span itemprop="name">[0704] 二分查找</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:11:42+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/d4c128b4.html" itemprop="url">
+            <span itemprop="name">[0702] 搜索长度未知的有序数组</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:11:08+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/d8da7f75.html" itemprop="url">
+            <span itemprop="name">[0668] 乘法表中第k小的数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:10:58+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e7abef48.html" itemprop="url">
+            <span itemprop="name">[0658] 找到 K 个最接近的元素</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:10:44+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/af3de20d.html" itemprop="url">
+            <span itemprop="name">[0644] 最大平均子段和 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:08:48+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e405f10d.html" itemprop="url">
+            <span itemprop="name">[0528] 按权重随机选择</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:08:17+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/6a2de4f9.html" itemprop="url">
+            <span itemprop="name">[0497] 非重叠矩形中的随机点</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:08:13+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/4dcd2bf3.html" itemprop="url">
+            <span itemprop="name">[0493] 翻转对</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:08:03+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/bf7212a9.html" itemprop="url">
+            <span itemprop="name">[0483] 最小好进制</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:07:55+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/575dbc42.html" itemprop="url">
+            <span itemprop="name">[0475] 供暖器</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:07:34+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/21df392d.html" itemprop="url">
+            <span itemprop="name">[0454] 四数相加 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:07:21+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/a11022bf.html" itemprop="url">
+            <span itemprop="name">[0441] 排列硬币</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:07:16+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/24db7551.html" itemprop="url">
+            <span itemprop="name">[0436] 寻找右区间</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:06:50+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/1aefbf43.html" itemprop="url">
+            <span itemprop="name">[0410] 分割数组的最大值</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:06:32+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/b3de31b6.html" itemprop="url">
+            <span itemprop="name">[0392] 判断子序列</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:06:18+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/24981a26.html" itemprop="url">
+            <span itemprop="name">[0378] 有序矩阵中第K小的元素</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:06:14+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/f53f4325.html" itemprop="url">
+            <span itemprop="name">[0374] 猜数字大小</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:06:07+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e39d6400.html" itemprop="url">
+            <span itemprop="name">[0367] 有效的完全平方数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:06:03+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/d6dad97b.html" itemprop="url">
+            <span itemprop="name">[0363] 矩形区域不超过 K 的最大数值和</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:54+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/d641f483.html" itemprop="url">
+            <span itemprop="name">[0354] 俄罗斯套娃信封问题</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:52+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/3bd18d49.html" itemprop="url">
+            <span itemprop="name">[0352] 将数据流变为多个不相交区间</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:50+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/f6ecd4d3.html" itemprop="url">
+            <span itemprop="name">[0350] 两个数组的交集 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:49+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/6696b35d.html" itemprop="url">
+            <span itemprop="name">[0349] 两个数组的交集</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:27+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/8a87242c.html" itemprop="url">
+            <span itemprop="name">[0327] 区间和的个数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:15+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/9e1ca0a6.html" itemprop="url">
+            <span itemprop="name">[0315] 计算右侧小于当前元素的个数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:02+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/14cf1e7f.html" itemprop="url">
+            <span itemprop="name">[0302] 包含全部黑色像素的最小矩形</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:05:00+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/465ae314.html" itemprop="url">
+            <span itemprop="name">[0300] 最长上升子序列</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:04:47+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/8a9ab69c.html" itemprop="url">
+            <span itemprop="name">[0287] 寻找重复数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:04:38+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/abbf700f.html" itemprop="url">
+            <span itemprop="name">[0278] 第一个错误的版本</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:04:35+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/c5586d1.html" itemprop="url">
+            <span itemprop="name">[0275] H指数 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:04:30+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/9d8b1750.html" itemprop="url">
+            <span itemprop="name">[0270] 最接近的二叉搜索树值</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:04:00+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/68f7c628.html" itemprop="url">
+            <span itemprop="name">[0240] 搜索二维矩阵 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:03:50+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/1cd846c3.html" itemprop="url">
+            <span itemprop="name">[0230] 二叉搜索树中第K小的元素</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:03:42+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e44aad84.html" itemprop="url">
+            <span itemprop="name">[0222] 完全二叉树的节点个数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:03:29+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/60a261f1.html" itemprop="url">
+            <span itemprop="name">[0209] 长度最小的子数组</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:02:54+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e2a8af81.html" itemprop="url">
+            <span itemprop="name">[0174] 地下城游戏</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:02:47+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/c4044406.html" itemprop="url">
+            <span itemprop="name">[0167] 两数之和 II - 输入有序数组</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:02:42+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ed7516e4.html" itemprop="url">
+            <span itemprop="name">[0162] 寻找峰值</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:02:34+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/b2bf00d4.html" itemprop="url">
+            <span itemprop="name">[0154] 寻找旋转排序数组中的最小值 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:02:33+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/e45e0b8c.html" itemprop="url">
+            <span itemprop="name">[0153] 寻找旋转排序数组中的最小值</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:01:21+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/9affc9bd.html" itemprop="url">
+            <span itemprop="name">[0081] 搜索旋转排序数组 II</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:01:14+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/bb1d6c58.html" itemprop="url">
+            <span itemprop="name">[0074] 搜索二维矩阵</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:01:09+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/667804d4.html" itemprop="url">
+            <span itemprop="name">[0069] x 的平方根</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:00:50+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/f02e0f90.html" itemprop="url">
+            <span itemprop="name">[0050] Pow(x, n)</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:00:34+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/ec5b185d.html" itemprop="url">
+            <span itemprop="name">[0034] 在排序数组中查找元素的第一个和最后一个位置</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:00:33+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/84a3c834.html" itemprop="url">
+            <span itemprop="name">[0033] 搜索旋转排序数组</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-07T00:00:04+08:00"
+              content="2020-03-07">
+          03-07
+        </time>
+      </div>
+
+      <h3 class="post-title">
+          <a class="post-title-link" href="/post/beeaf9e5.html" itemprop="url">
+            <span itemprop="name">[0004] 寻找两个有序数组的中位数</span>
+          </a>
+      </h3>
+
+    </header>
+  </article>
+
+    </div>
+  </div>
+  
+  
+  
+
+  
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">LeetCode</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="http://leetcodedoc.xuezhisd.top/" title="Docs → http:&#x2F;&#x2F;leetcodedoc.xuezhisd.top" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>Docs</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://leetcodedoc.xuezhisd.top/LeetCodeCrowdsource.pdf" title="PDF → http:&#x2F;&#x2F;leetcodedoc.xuezhisd.top&#x2F;LeetCodeCrowdsource.pdf" rel="noopener" target="_blank"><i class="fa fa-fw fa-file-pdf-o"></i>PDF</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/algoboy101/LeetCodeCrowdsource" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;algoboy101&#x2F;LeetCodeCrowdsource" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuezhisd.top/" title="https:&#x2F;&#x2F;blog.xuezhisd.top&#x2F;" rel="noopener" target="_blank">张学志</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/jianrenfang/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;jianrenfang&#x2F;" rel="noopener" target="_blank">方秋结</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+      
+      <!-- 
+      
+           <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="210" height="110" src="//music.163.com/outchain/player?type=2&id=5276811&auto=1&height=32"></iframe>
+           </div>
+      
+      -->
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeetCodeCrowdsource</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">17:11</span>
+</div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-581db2eae126635e" async="async"></script>
+  </div>
+
+        
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1273432675&web_id=1273432675"></script>
+  </div>
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes: 0,
+          toolbar: 0,
+          statusbar: 0,
+          pagemode: 'thumbs',
+          view: 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '850px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
